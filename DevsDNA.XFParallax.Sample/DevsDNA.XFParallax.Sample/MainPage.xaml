@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:DevsDNA.XFParallax.Sample"
@@ -20,9 +20,8 @@
         </ContentView.Margin>
         <Image HorizontalOptions="Center" VerticalOptions="Start" Margin="0,-50,0,0"
                  HeightRequest="100" WidthRequest="100"
-               Source="http://foundlovenowwhat.com/wp/wp-content/uploads/2013/11/Pic-Rounded-.png" Aspect="AspectFit"/>
+               Source="http://test.welshalien.co.uk/wp/wp-content/uploads/2017/04/O6K3Sjb2s8HDWClt.jpg" Aspect="AspectFit"/>
       </ContentView>
     </parallax:ParallaxView.BodyContent>
   </parallax:ParallaxView>
-
 </ContentPage>

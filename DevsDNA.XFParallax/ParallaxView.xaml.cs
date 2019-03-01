@@ -6,10 +6,14 @@
     {
         private double lastScroll = 0;
 
-        public static readonly BindableProperty HeaderContentProperty = BindableProperty.Create(nameof(HeaderContent), typeof(ContentView), typeof(ParallaxView), coerceValue: HeaderContentCoerceValue);
-        public static readonly BindableProperty HeaderScrollSpeedProperty = BindableProperty.Create(nameof(HeaderScrollSpeed), typeof(int), typeof(ParallaxView), 2);
-        public static readonly BindableProperty BodyContentProperty = BindableProperty.Create(nameof(BodyContent), typeof(ContentView), typeof(ParallaxView), coerceValue: BodyContentCoerceValue);
-        public static readonly BindableProperty BodyMarginProperty = BindableProperty.Create(nameof(BodyMargin), typeof(Thickness), typeof(ParallaxView), new Thickness(0), coerceValue: BodyMarginCoerceValue);
+        public static readonly BindableProperty HeaderContentProperty = BindableProperty.Create(nameof(HeaderContent), typeof(ContentView), 
+            typeof(ParallaxView), coerceValue: HeaderContentCoerceValue);
+        public static readonly BindableProperty HeaderScrollSpeedProperty = BindableProperty.Create(nameof(HeaderScrollSpeed), 
+            typeof(int), typeof(ParallaxView), 2);
+        public static readonly BindableProperty BodyContentProperty = BindableProperty.Create(nameof(BodyContent), 
+            typeof(ContentView), typeof(ParallaxView), coerceValue: BodyContentCoerceValue);
+        public static readonly BindableProperty BodyMarginProperty = BindableProperty.Create(nameof(BodyMargin), 
+            typeof(Thickness), typeof(ParallaxView), new Thickness(0), coerceValue: BodyMarginCoerceValue);
 
         public ParallaxView()
         {
@@ -92,7 +96,7 @@
 
         private void ParentScroll_Scrolled(object sender, ScrolledEventArgs e)
         {
-            if (lastScroll == 0)
+            if (System.Math.Abs(lastScroll) < double.Epsilon)
                 lastScroll = e.ScrollY;
             else
             {
